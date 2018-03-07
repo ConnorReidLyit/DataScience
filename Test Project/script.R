@@ -1,2 +1,2 @@
-install.packages("ggplot2")
-library(gglot2)
+a <- "Hello world"
+a
