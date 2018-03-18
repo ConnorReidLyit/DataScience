@@ -12,12 +12,12 @@ str(my_data)
 
 #Identify the structure of the Type column and refactor it  
 head(my_data$Type)
-factor(my_data$Type, order = TRUE,  levels = c("Type 1", "Type 2") )
+my_data$Type <- factor(my_data$Type, order = TRUE,  levels = c("Type 1", "Type 2") )
 str(my_data$Type)
 
 #Identify the structure of the Health_Status column and update refactor it from poor to excellent
 head(my_data$Health_Status)
-factor(my_data$Health_Status, order = TRUE, levels = c("Poor", "Improved", "Excellent"))
+my_data$Health_Status <- factor(my_data$Health_Status, order = TRUE, levels = c("Poor", "Improved", "Excellent"))
 str(my_data$Health_Status)
 
 #Review the structure of the dataframe to show all changes 
@@ -32,7 +32,7 @@ class(patient_names)
 #Examine how many missing values are in the data frame my_data. Count this value
 nrow(my_data) #show the number of rows of data prior to removing the NA values
 
-sum(is.na(my_data)) # returns 3 NA as it does not count cells which are "blank"
+sum(is.na(my_data)) # returns 20 NA as it does not count cells which are "blank"
 my_data[my_data == ""] <- NA #update the "blank" cells to NA
 sum(is.na(my_data)) #counts the total NA values after the "blank" values have been updated to NA
 
