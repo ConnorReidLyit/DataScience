@@ -1,2 +1,6 @@
-install.packages("ggplot2")
-library(gglot2)
+add_two_numbers <- function(no1, no2)
+{
+    result <- no1 + no2
+    return(result)
+}
+add_two_numbers(3,5)
