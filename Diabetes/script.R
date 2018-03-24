@@ -1,19 +1,19 @@
 getwd()
-setwd("C:/Users/Connor/Documents/MSc Computing in Big Data Analytics/Data Science/Practical")
+setwd("C:/Users/Connor/Documents/MSc Computing in Big Data Analytics/Data Science/Practical/Practical 1")
 
 #Create a Dataframe of the Daibetes data and review its structure
-my_data <- read.csv("Diabetes-md.csv")
-str(my_data)
-class(my_data)
+diabetes <- read.csv("Diabetes-md.csv")
+str(diabetes)
+class(diabetes)
 
 #Create more suitable column names and update the dataframe column headers
-colnames(my_data) <- c("Patient_Name", "NI_Address", "Type", "Age", "Health_Status")
-str(my_data)
+colnames(diabetes) <- c("Patient_Name", "NI_Address", "Type", "Age", "Health_Status")
+str(diabetes)
 
 #Identify the structure of the Type column and refactor it  
-head(my_data$Type)
-my_data$Type <- factor(my_data$Type, order = TRUE,  levels = c("Type 1", "Type 2") )
-str(my_data$Type)
+head(diabetes$Type)
+diabetes$Type <- factor(diabetes$Type,  levels = c("Type 1", "Type 2") )
+str(diabetes$Type)
 
 #Identify the structure of the Health_Status column and update refactor it from poor to excellent
 head(my_data$Health_Status)
