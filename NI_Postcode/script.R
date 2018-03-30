@@ -26,6 +26,7 @@ head(my_data$County)
 
 #Putting the primary key variable first
 my_data <- my_data[, c(15, 1:14)]
+str(my_data)
 head(my_data)
 
 
