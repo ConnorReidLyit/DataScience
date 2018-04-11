@@ -20,5 +20,7 @@ combine_results <- function(folder_list) {
 }
 
 AllNICrimeData <- combine_results(folder_list)
+
 str(AllNICrimeData)
+
 write.csv(AllNICrimeData, "AllNICrimeData.csv")
