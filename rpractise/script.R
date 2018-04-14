@@ -5,3 +5,17 @@ x
 installed.packages("swirl")
 library(swirl)
 swirl()
+
+
+my_list <- list(a = matrix(1:9, 3), b = 1:5, c = matrix(1:4, 2), d = 2)
+sapply(my_list, sum)
+
+first_list <- list(a = matrix(1:9, 3), b = 1:5, c = matrix(1:4, 2), d = 2)
+second_list <- list(a = matrix(1:9, 3), b = 1:7, c = matrix(1:4, 2), d = 2)
+
+simple_function <- function(first_list, second_list) {
+    result <- NROW(first_list) + NROW(second_list)
+    return(result)
+}
+
+mapply(simple_function, first_list, second_list)
