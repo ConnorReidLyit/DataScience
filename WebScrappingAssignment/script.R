@@ -51,14 +51,22 @@ DOB <- gsub(' ', '-', DOB)
 DOB <- as.Date(DOB, "%B-%d-%Y")
 str(DOB)
 
+#read the Died At html information
 Died_At_html <- html_nodes(web_page, '#idolize > div > div.fps-desc.fpf-block > p:nth-child(6)')
+
+#convert the Died at to readable text
 Died_At <- html_text(Died_At_html)
 head(Died_At)
+
+#drop the unrequired text from the information and convert to a number
 Died_At <- gsub('.*: ', "", Died_At)
 Died_At <- as.numeric(Died_At)
 str(Died_At)
 
+#read the star sign html information
 Star_Sign_html <- html_nodes(web_page, '#idolize > div > div.fps-desc.fpf-block > p:nth-child(8)')
+
+#convert the Star Sign to readable text and remove the unrequired characters
 Star_Sign <- html_text(Star_Sign_html)
 head(Star_Sign)
 Star_Sign <- gsub('.*: ', "", Star_Sign)
@@ -106,13 +114,5 @@ read_html() %>%
 
 head(Victims)
 str(Victims)
-
-
-
-
-
-
-
-
 
 
