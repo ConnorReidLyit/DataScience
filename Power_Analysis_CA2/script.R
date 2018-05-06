@@ -47,7 +47,5 @@ prop.table(tbl_view, 2)
 stat_analysis_result <- chisq.test(tbl_view)
 stat_analysis_result
 
-plot(stat_analysis_result)
-
 
 
