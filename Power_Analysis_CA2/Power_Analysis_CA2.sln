@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{DA7A21FA-8162-4350-AD77-A8D1B671F3ED}") = "Power_Analysis_CA2", "Power_Analysis_CA2.rxproj", "{6A67217F-2202-4DA0-8AD3-C7F38E8C657C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A67217F-2202-4DA0-8AD3-C7F38E8C657C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A67217F-2202-4DA0-8AD3-C7F38E8C657C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A67217F-2202-4DA0-8AD3-C7F38E8C657C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A67217F-2202-4DA0-8AD3-C7F38E8C657C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

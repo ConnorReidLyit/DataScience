@@ -4,6 +4,7 @@ library(rvest)
 url <- 'https://www.thefamouspeople.com/profiles/andrew-cunanan-5435.php'
 
 web_page <- read_html(url)
+?read_html
 
 #scrape the Also Known As information from the website. The inspect function in chrome was used to find the element needed
 AKA_html <- html_nodes(web_page, '#idolize > div > div.fps-desc.fpf-block > p:nth-child(2)')
@@ -106,12 +107,22 @@ str(data)
 
 #import the victims table from Wiki
 url <- "https://en.wikipedia.org/wiki/List_of_serial_killers_by_number_of_victims"
-victims <- url %>% #the %>% enables the input of several commands to be run at once similar to a console command line
+victims <- url %>%  #the %>% enables the input of several commands to be run at once similar to a console command line
 read_html() %>%
   html_nodes(xpath = '//*[@id="mw-content-text"]/div/table[2]') %>%
   html_table()
 
-head(Victims)
-str(Victims)
+head(victims)
+str(victims)
 
+url2 <- "https://en.wikipedia.org/wiki/List_of_serial_killers_by_number_of_victims"
+table_html <- read_html(url2)
 
+#To add a table we need to copy the xpath instead of the selector from the elements window
+table_data <- html_nodes(table_html, xpath = '//*[@id = "mw-content-text"]/div/table[2]')
+
+#html_table is used to coerce the data into a table
+table_data <-html_table(table_data)
+
+head(table_data)
+str(table_data)
