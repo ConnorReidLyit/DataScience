@@ -1,3 +1,5 @@
+#link to Kaggle Data: https://www.kaggle.com/c/sf-crime/data
+
 install.packages('pwr')
 install.packages('dplyr')
 library(pwr)
