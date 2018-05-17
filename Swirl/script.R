@@ -14,3 +14,7 @@ library(installr)
 
 # using the package:
 updateR()
+
+swirl::install_course()
+library(swirl)
+swirl()

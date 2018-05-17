@@ -24,6 +24,13 @@ combine_results <- function(file_list)
 
 my_data <- combine_results(csv_file_list)
 my_data
+colnames(my_data) <- c("Date", "Ball_1", "Ball_2", "Ball_3", "Ball_4", "Ball_5", "Ball_6", "Bonus")
 
 str(my_data)
+
+install.packages("dplyr")
+library(dplyr)
+
+my_data %>% select(2:8) %>% summarise(AvgBall = mean(Ball_1), MaxBall = max(Ball_1), MinBall = min(Ball_1))
+range(my_data$Ball_1)
 
